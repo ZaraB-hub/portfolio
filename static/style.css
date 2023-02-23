@@ -5,7 +5,16 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    /* 1/2 of the height and width of the actual gif */
+    margin: -16px 0 0 -16px;
+    z-index: 100;
+    }
 nav {
     display: flex;
     align-items: baseline;
@@ -149,6 +158,50 @@ nav :first-child {
     }
 }
 
+.set{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill>img{
+    width: 30px;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form__input{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form__input>input,
+.form__input>textarea
+{
+    border: none;
+    margin-top:8px ;
+    border-bottom: 1px solid black;
+}
+
+.form__input>*:focus{
+    outline:none;
+}
+
+.form__input:focus>label{
+    color: aqua;
+}
 @media (max-width: 768px) {
     nav {
         padding: 30px;
