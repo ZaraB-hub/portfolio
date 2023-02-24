@@ -1,20 +1,13 @@
 
+
+
 window.addEventListener('DOMContentLoaded', () => {
-
-
-    const img=document.getElementById("loading");
-    const body=document.getElementById("body");
-
     const menuItem = document.querySelector(".nav__menu");
     const overlay = document.querySelector(".overlay");
     const x = document.querySelector(".nav__x");
     const navLinks = document.querySelector(".nav__right");
     const main = document.querySelector("main");
 
-    body.addEventListener("load",()=>{
-        img.classList.remove("loading");
-    });
-    
     menuItem.addEventListener("click", () => {
         menuItem.style.display = "none";
         overlay.style.display = "block";
@@ -35,8 +28,8 @@ window.addEventListener('DOMContentLoaded', () => {
         x.classList.add("hidden");
         main.classList.remove("blur");
         navLinks.style.display = "none";
-
-
-
     });
+
+
+
 });
