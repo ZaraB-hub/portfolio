@@ -266,10 +266,7 @@ nav :first-child {
 
 .about__div>img {
     width: 200px;
-
-
 }
-
 #skills {
     align-items: center;
     gap: 50px;
@@ -343,6 +340,7 @@ form {
 
 .form__input>*:focus {
     outline: none;
+    border-bottom: 2px solid var(--primary2);
 }
 
 .form__input>label {
@@ -354,7 +352,7 @@ form {
 
 
 .form__input>label:focus {
-    color: var(--primary2);
+    font-size: 12px;
 }
 
 form>button {
@@ -372,7 +370,7 @@ form>button:hover {
 
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
     .about__div
     {
@@ -456,4 +454,4 @@ form>button:hover {
     .nav__right {
         display: flex !important;
     }
-}
+} */
