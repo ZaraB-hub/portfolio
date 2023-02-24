@@ -16,6 +16,19 @@
     --gradinet: linear-gradient(90deg, rgba(153, 117, 225, 1) 26%, rgba(175, 105, 213, 1) 58%);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.scroll.visible {
+    opacity: 1;
+}
+
+
 body {
     display: grid;
 
@@ -35,7 +48,7 @@ body {
 
 main {
     display: grid;
-    row-gap: 100px;
+    row-gap: 200px;
 }
 
 nav {
@@ -173,11 +186,7 @@ nav :first-child {
     animation-delay: 1s;
 }
 
-#contact {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-}
+
 
 @keyframes fadeIn {
     from {
@@ -220,13 +229,17 @@ nav :first-child {
     margin-top: 50px;
 }
 
-#home,#about,#skills,#portfolio{
+#home,
+#about,
+#skills,
+#portfolio,
+#contact {
     display: flex;
     flex-direction: column;
     min-height: 80vh;
 }
 
-.about__div{
+.about__div {
     margin-top: 50px;
     display: flex;
     justify-content: flex-start;
@@ -234,43 +247,48 @@ nav :first-child {
     gap: 7em;
 }
 
-#about{
+#about {
     justify-content: center;
     align-items: flex-start;
 }
-.section__heading{
+
+.section__heading {
     font-size: clamp(20px, 4vw, 40px);
 }
-.about__div>p{
+
+.about__div>p {
     max-width: 50%;
     font-size: 18px;
     line-height: 30px;
     text-align: justify;
 
 }
-.about__div>img{
+
+.about__div>img {
     width: 200px;
-    
+
 
 }
 
-#skills{
+#skills {
     align-items: center;
     gap: 50px;
 }
 
-#skills>h1{
+#skills>h1 {
     font-size: clamp(20px, 4vw, 40px);
 }
 
 .set {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
-    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-top: 50px;
 }
 
-.skill>img {
+.set .skill>img {
     width: 50px;
 }
 
@@ -278,21 +296,35 @@ nav :first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 
 
 }
 
-.portfolio__set{
-    margin-top: 50px ;
+.portfolio__set {
     display: flex;
     justify-content: space-between;
-    
+    margin-top: 100px;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+#portfolio>h1 {
+    text-align: center;
+}
+
+#contact {
+    /* align-items: center;     */
+
 }
 
 form {
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 50px;
 }
 
 .form__input {
@@ -306,24 +338,26 @@ form {
     border: none;
     margin-top: 8px;
     border-bottom: 2px solid black;
-    font-size:18px;
+    font-size: 18px;
 }
 
 .form__input>*:focus {
     outline: none;
 }
 
-.form__input>label{
-    font-size: 22px;
+.form__input>label {
+    font-size: 16px;
     margin-bottom: 5px;
     opacity: 0.7;
+    transition: color 0.2s ease-in-out;
 }
 
-.form__input>label:focus{
+
+.form__input>label:focus {
     color: var(--primary2);
 }
 
-form>button{
+form>button {
     border: 2px solid var(--primary2);
     background-color: transparent;
     border-radius: 7px;
@@ -332,7 +366,7 @@ form>button{
     padding: 15px 0px;
 }
 
-form>button:hover{
+form>button:hover {
     background-color: var(--primary2);
     color: white;
 
@@ -340,7 +374,15 @@ form>button:hover{
 
 @media (max-width: 768px) {
 
+    .about__div
+    {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
 
+    
+    }
     .nav__right {
         flex-direction: column;
         justify-content: center;
@@ -403,7 +445,6 @@ form>button:hover{
         z-index: 2;
     }
 
-}
 
 @media (min-width: 768px) {
 

@@ -8,6 +8,18 @@ window.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelector(".nav__right");
     const main = document.querySelector("main");
 
+    const sections = Array.from(document.getElementsByClassName('scroll'));
+
+    window.addEventListener('scroll', ()=>{
+        sections.forEach(section => {
+            const top = section.getBoundingClientRect().top;
+            if (top < window.innerHeight * 0.8) {
+                section.classList.add('visible');
+            }
+        });
+    });
+
+
     menuItem.addEventListener("click", () => {
         menuItem.style.display = "none";
         overlay.style.display = "block";
