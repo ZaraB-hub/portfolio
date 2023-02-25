@@ -7,10 +7,9 @@ window.addEventListener('DOMContentLoaded', () => {
     const x = document.querySelector(".nav__x");
     const navLinks = document.querySelector(".nav__right");
     const main = document.querySelector("main");
-
     const sections = Array.from(document.getElementsByClassName('scroll'));
 
-    window.addEventListener('scroll', ()=>{
+    window.addEventListener('scroll', () => {
         sections.forEach(section => {
             const top = section.getBoundingClientRect().top;
             if (top < window.innerHeight * 0.8) {
@@ -18,6 +17,21 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+
+    // const inputs = document.getElementsByTagName("input");
+    // console.log(inputs)
+    // Array.from(inputs).forEach((input) => {
+    //     input.addEventListener("focus", () => {
+    //         const label = document.querySelector(`label[for="${input.id}"]`);
+    //         label.classList.add("small__font");
+    //         console.log(label.classList);
+
+    //     });
+
+
+
+
 
 
     menuItem.addEventListener("click", () => {
