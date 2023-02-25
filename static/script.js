@@ -2,11 +2,7 @@
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    const menuItem = document.querySelector(".nav__menu");
-    const overlay = document.querySelector(".overlay");
-    const x = document.querySelector(".nav__x");
     const navLinks = document.querySelector(".nav__right");
-    const main = document.querySelector("main");
     const sections = Array.from(document.getElementsByClassName('scroll'));
 
     window.addEventListener('scroll', () => {
@@ -19,41 +15,25 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // const inputs = document.getElementsByTagName("input");
-    // console.log(inputs)
-    // Array.from(inputs).forEach((input) => {
-    //     input.addEventListener("focus", () => {
-    //         const label = document.querySelector(`label[for="${input.id}"]`);
-    //         label.classList.add("small__font");
-    //         console.log(label.classList);
+    const buttonMenu = document.querySelector(".hambruger__menu");
+    buttonMenu.addEventListener("click", () => {
+        const currentState = buttonMenu.getAttribute("data-state");
+        if (!currentState || currentState === "closed") {
+            buttonMenu.setAttribute("data-state", "opened");
+            buttonMenu.setAttribute("aria-expanded", "true");
+            navLinks.style.display = "flex";
+            navLinks.classList.add("animate__slideInRight");
+        } else {
+            buttonMenu.setAttribute("data-state", "closed");
+            buttonMenu.setAttribute("aria-expanded", "false");
+            navLinks.classList.remove("animate__slideInRight");
+            navLinks.classList.add("animate__slideOutRight");
+            navLinks.addEventListener("animationend", () => {
+                navLinks.style.display = "none";
+                navLinks.classList.remove("animate__slideOutRight");
+            }, { once: true });
 
-    //     });
-
-
-
-
-
-
-    menuItem.addEventListener("click", () => {
-        menuItem.style.display = "none";
-        overlay.style.display = "block";
-        x.style.display = "block";
-        main.classList.add("blur");
-        navLinks.style.display = "flex";
-    });
-
-    x.addEventListener("click", () => {
-        menuItem.style.display = "block";
-        overlay.classList.add('slide-out');
-        setTimeout(() => {
-            overlay.style.display = "none";
-            overlay.classList.remove("slide-out")
-        }, 750);
-
-        x.style.display = "none";
-        x.classList.add("hidden");
-        main.classList.remove("blur");
-        navLinks.style.display = "none";
+        }
     });
 
 
