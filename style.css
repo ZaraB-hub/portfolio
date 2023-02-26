@@ -330,7 +330,7 @@ nav :first-child {
 }
 
 .card__picture{
-    background-color: #9975E1;
+    background-color: transparent;
     height: 35%;
 
     
