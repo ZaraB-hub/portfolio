@@ -440,6 +440,8 @@ footer{
 
 .social{
     align-self: center;
+    display: flex;
+    gap: 6px;
 }
 
 footer{
