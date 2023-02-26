@@ -426,7 +426,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
     background-color: hsla(283, 91%, 55%, 0.1);
 ;
 }
@@ -440,6 +440,20 @@ footer{
 
 .social{
     align-self: center;
+}
+
+footer{
+    position: relative;
+}
+.up{
+    position: absolute;
+    right: 5px;
+    color: #9975E1;
+}
+
+.cc{
+    opacity: .7;
+    margin-top: 7px;
 }
 @media (min-width:46em) {
     .nav__right{
