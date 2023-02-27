@@ -20,6 +20,9 @@ html {
     scroll-behavior: smooth;
 }
 
+a{
+    text-decoration: none;
+}
 .scroll {
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -70,7 +73,6 @@ nav {
 
 
 .nav__link {
-    text-decoration: none;
     text-transform: uppercase;
     color: black;
     position: relative;
@@ -356,10 +358,19 @@ nav :first-child {
 
 #contact {
     align-items: center;
+    gap: 20px;
 }
-
+#contact>p{
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 30px 0px;
+    line-height: 30px;
+    max-width: min(40rem, 100%);
+}
 #contact>h1 {
     padding-bottom: 20px;
+    font-size: clamp(20px, 6vw, 60px);
+
 }
 
 form {
@@ -460,8 +471,18 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 5px;
-    background-color: hsla(283, 91%, 55%, 0.1);
-;
+    /* background-color: hsla(283, 91%, 55%, 0.1); */
+
+}
+
+.footer__link>a{
+    opacity: 0.7;
+    color: black;
+}
+
+.footer__link>a:hover{
+
+    color: #9975E1;
 }
 
 .github{
@@ -483,6 +504,7 @@ footer{
 .up{
     position: absolute;
     right: 5px;
+    bottom:5px;
     color: #9975E1;
 }
 
@@ -503,6 +525,9 @@ footer{
 
     }
 
+    .portfolio__set{
+        justify-content: center;
+    }
 
 
     #home{

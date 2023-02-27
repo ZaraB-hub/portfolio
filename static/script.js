@@ -14,6 +14,47 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const pictures = document.querySelectorAll(".card__picture");
+    pictures.forEach((picture) => {
+
+        picture.addEventListener("click", () => {
+            console.log("zara");
+
+            var overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = "0";
+            overlay.style.left = "0";
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+            overlay.style.zIndex = "9999";
+
+            console.log(overlay);
+
+            var fullImg = document.createElement("img");
+            // Set the src attribute of the fullImg element to the src of the clicked image
+            fullImg.src = picture.querySelector("img").src;
+            fullImg.style.maxWidth = "80%";
+            fullImg.style.maxHeight = "80%";
+            fullImg.style.position = "absolute";
+            fullImg.style.top = "50%";
+            fullImg.style.left = "50%";
+            fullImg.style.transform = "translate(-50%, -50%)";
+
+            console.log(fullImg);
+            overlay.appendChild(fullImg);
+
+
+            // Add the image to the overlay element
+            document.body.appendChild(overlay);
+
+            // Add a click event listener to the overlay element to close it when clicked
+            overlay.addEventListener("click", function () {
+                document.body.removeChild(overlay);
+            });
+
+        })
+    });
 
     const buttonMenu = document.querySelector(".hambruger__menu");
     buttonMenu.addEventListener("click", () => {
