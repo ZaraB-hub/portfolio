@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="icon" type="image/x-icon" href="/assets/logo.png">
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="/static/script.js"></script>
+
     <title>ZaraB</title>
 </head>
 
@@ -155,7 +160,8 @@
                     </div>
                     <div class="container">
                         <h2><b>Pokemon Search</b></h2>
-                        <p> App to search and display all existing Pokemon, while providing a detailed view of each Pokemon. Built using React JS. </p>
+                        <p> App to search and display all existing Pokemon, while providing a detailed view of each
+                            Pokemon. Built using React JS. </p>
                         <div class="btn__set">
                             <a class="card__button resume" href="https://github.com/ZaraB-hub/pokemon-index"
                                 target="_blank">GitHub <i class="fa fa-arrow-right" aria-hidden="true"></i>
@@ -197,7 +203,8 @@
                     </div>
                     <div class="container">
                         <h2><b>Restaurant Page</b></h2>
-                        <p>A restaurant landing page, that showcases the restaurant's menu, location, hours of operation, and other important information. </p>
+                        <p>A restaurant landing page, that showcases the restaurant's menu, location, hours of
+                            operation, and other important information. </p>
                         <div class="btn__set">
                             <a class="card__button resume" href="https://github.com/?q=oljk" target="_blank">GitHub <i
                                     class="fa fa-arrow-right" aria-hidden="true"></i>
@@ -216,7 +223,9 @@
 
         </section>
         <section id="contact" class="scroll">
-            <!-- <form action="" method=""> 
+            <h1 class="section__heading animate__animated animate__fadeInDown">Get In Touch</h1>
+
+            <!-- <form onsubmit="sendEmail(); reset(); return false;">
                 <div class="form__input animate__animated animate__fadeInDown">
                     <label for="name" id="name_label" class="control-label">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -227,21 +236,19 @@
                 </div>
                 <div class="form__input animate__animated animate__fadeInDown">
                     <label class="control-label" for="message">Message:</label>
-                    <textarea id="message" name="message" tabindex="5" required></textarea>
+                    <textarea id="message" name="message" rows="4" required></textarea>
                 </div>
                 <button class="resume" type="submit">Sent Message <i class="fa fa-paper-plane" aria-hidden="true"></i>
                 </button>
             </form> -->
 
-            <h1 class="section__heading animate__animated animate__fadeInDown">Get In Touch</h1>
-            <p> I’m always looking new opportunities,so my inbox is always open. Whether you have a question or just want to say hi, feel free to do so!</p>
-            <a class="resume" href="mailto:zarabahtanovic@gmail.com">Say Hello </a>        </section>
+            <p> I’m always looking for new opportunities,so my inbox is always open. Whether you have a question or just want to say hi, feel free to do so!</p>
+            <a class="resume" href="mailto:zarabahtanovic@gmail.com">Say Hello </a>        </section> 
     </main>
 
     <footer>
         <!-- <div class="social">
-
-            <a href="mailto:zarabahtanovic@gmail.com"><i class="fa fa-envelope fa-2x github" aria-hidden="true"></i></a>
+        <a href="mailto:zarabahtanovic@gmail.com"><i class="fa fa-envelope fa-2x github" aria-hidden="true"></i></a>
         </div>
         <a href="#nav"><i class="fa fa-arrow-up up" aria-hidden="true" style="color:black; opacity: 0.7;"></i>
         </a>
@@ -249,14 +256,28 @@
         <div class="cc">© 2023 ZaraB. All rights reserved.</div> -->
 
         <a href="https://github.com/ZaraB-hub" target="_blank"> <i class="fa fa-github fa-2x github"
-            aria-hidden="true"></i></a>
-        <div class="footer__link"><a href="https://github.com/ZaraB-hub/portfolio" target="_blank">Designed & Built by ZaraB</a></div>
+                aria-hidden="true"></i></a>
+        <div class="footer__link"><a href="https://github.com/ZaraB-hub/portfolio" target="_blank">Designed & Built by
+                ZaraB</a></div>
 
     </footer>
 
 
-    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "zaratester717@gmail.com",
+                Password: "uniburch",
+                To: 'zarabahtanovic@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "Contact Form",
+                Body: document.getElementById("message").value + document.getElementById("name").value
+            }).then(
+                message => alert("Message Sent Succesfully")
+            );
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
 
             new TypeIt(".name", {
@@ -267,16 +288,10 @@
                 startDelay: 1000,
             })
                 .type("Zara Bahtanovic", { delay: 100 })
-                // .move(null, { to: "START", instant: true, delay: 300 })
-                // .move(1, { delay: 200 })
-                // .delete(1)
-                // .type("Z", { delay: 225 })
-                // .move(null, { to: "END" })
                 .delete(1)
                 .type("ć", { delay: 300 })
                 .go();
         })</script>
-    <script src="/static/script.js"></script>
 
 </body>
 
