@@ -102,7 +102,7 @@ nav {
     bottom: -2px;
     height: 1px;
     background-color: var(--accent);
-    transition: width 0.4s ease-in-out;
+    transition: width 0.3s ease-in-out;
     width: 0;
 }
 
