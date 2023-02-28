@@ -238,19 +238,7 @@
 
 
     <script>
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "zaratester717@gmail.com",
-                Password: "uniburch",
-                To: 'zarabahtanovic@gmail.com',
-                From: document.getElementById("email").value,
-                Subject: "Contact Form",
-                Body: document.getElementById("message").value + document.getElementById("name").value
-            }).then(
-                message => alert("Message Sent Succesfully")
-            );
-        }
+
 
         window.addEventListener('DOMContentLoaded', () => {
 
