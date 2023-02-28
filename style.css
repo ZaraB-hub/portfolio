@@ -65,7 +65,7 @@ nav {
 .logo {
     width: 45px;
     height: 45px;
-    background-image: url("/assets/logo.png");
+    background-image: url("./assets/logo.png");
     position: relative;
     background-repeat: no-repeat;
     background-size: contain;
