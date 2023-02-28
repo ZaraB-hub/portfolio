@@ -20,9 +20,10 @@ html {
     scroll-behavior: smooth;
 }
 
-a{
+a {
     text-decoration: none;
 }
+
 .scroll {
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -52,7 +53,7 @@ nav {
     padding: 30px 50px;
 }
 
-#home{
+#home {
     justify-content: center;
 }
 
@@ -322,7 +323,7 @@ nav :first-child {
     text-align: center;
 }
 
-.card{
+.card {
     border: 1px solid black;
     border-radius: 7px;
     width: 250px;
@@ -331,14 +332,14 @@ nav :first-child {
 
 }
 
-.card__picture{
+.card__picture {
     background-color: transparent;
     height: 35%;
 
-    
+
 }
 
-.card > .container{
+.card>.container {
     padding: 17px;
     height: 65%;
     display: flex;
@@ -346,16 +347,17 @@ nav :first-child {
     gap: 20px;
 }
 
-.container>p{
+.container>p {
     width: 214.67px;
     height: 116px;
 }
-.btn__set{
+
+.btn__set {
     display: flex;
     gap: 8px;
 }
 
-.btn__set>button{
+.btn__set>button {
     padding: 7px;
 }
 
@@ -363,13 +365,15 @@ nav :first-child {
     align-items: center;
     gap: 20px;
 }
-#contact>p{
+
+#contact>p {
     text-align: center;
     font-size: 18px;
     margin: 10px 30px 0px;
     line-height: 30px;
     max-width: min(40rem, 100%);
 }
+
 #contact>h1 {
     padding-bottom: 20px;
     font-size: clamp(20px, 6vw, 60px);
@@ -465,7 +469,7 @@ form>button {
     transform: rotate(-45deg);
 }
 
-footer{
+footer {
     margin-top: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -478,45 +482,48 @@ footer{
 
 }
 
-.footer__link>a{
+.footer__link>a {
     opacity: 0.7;
     color: black;
 }
 
-.footer__link>a:hover{
+.footer__link>a:hover {
 
     color: #9975E1;
 }
 
-.github{
+.github {
     color: black;
 }
-.github:hover{
+
+.github:hover {
     color: var(--primary2);
 }
 
-.social{
+.social {
     align-self: center;
     display: flex;
     gap: 6px;
 }
 
-footer{
+footer {
     position: relative;
 }
-.up{
+
+.up {
     position: absolute;
     right: 5px;
-    bottom:5px;
+    bottom: 5px;
     color: #9975E1;
 }
 
-.cc{
+.cc {
     opacity: .7;
     margin-top: 7px;
 }
+
 @media (min-width:46em) {
-    .nav__right{
+    .nav__right {
         display: flex !important;
     }
 }
@@ -528,14 +535,15 @@ footer{
 
     }
 
-    .portfolio__set{
+    .portfolio__set {
         justify-content: center;
     }
 
 
-    #home{
+    #home {
         min-height: 70vh;
     }
+
     #contact {
         min-height: 50vh;
     }
@@ -579,6 +587,15 @@ footer{
         animation-duration: 1s;
         animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
     }
+
+
+
+    @supports not (backdrop-filter: blur(1rem)) {
+        .nav__right{
+            background-color: rgb(125, 123, 123);
+        }
+    }
+
 
 
 
