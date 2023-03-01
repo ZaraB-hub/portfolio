@@ -440,10 +440,12 @@ form>button {
     display: none;
     border: none;
     background-color: transparent;
-    position: fixed;
-    right: 0;
 }
 
+.button-one[aria-expanded="true"]{
+    position: fixed;
+    right: 5px;
+}
 .button-one .line {
     transition: y 300ms ease-in 300ms,
         transform 300ms ease-in,
