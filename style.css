@@ -440,6 +440,8 @@ form>button {
     display: none;
     border: none;
     background-color: transparent;
+    position: fixed;
+    right: 0;
 }
 
 .button-one .line {
